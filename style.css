@@ -1,0 +1,352 @@
+
+body{
+font-family: 'Montserrat', sans-serif;
+font-weight: 300;
+  background-color: rgb(48, 48, 54);
+}
+
+html,
+body {
+    overscroll-behavior-y: contain;
+}
+
+button {
+  display: inline-flex;
+  height: 40px;
+  background-color: #015fce;
+  margin: 10px 10px 10px 10px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color:white;
+  padding:20px;
+  border-radius: 20px;
+  border:none;
+}
+button.cancel{
+  background-color: #c2c2c2;
+}
+
+button.add{
+  background-color: #70b575;
+  width:80%;
+}
+
+canvas{
+  margin: 0;
+padding: 0;
+}
+
+#main{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+#Container{
+
+display: flex;
+align-content: center;
+justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+#Container{
+  cursor:grab;
+}
+
+h1{
+  text-align: center;
+  color:white;
+  font-weight: 300;
+}
+
+
+input, label {
+    display:block;
+}
+
+textarea, input{
+  font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+
+background: #DAE6F1;
+border: 1px solid #D1E1EF;
+box-sizing: border-box;
+border-radius: 5px;
+padding: 5px;
+}
+
+label{
+  font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 18px;
+color: #000000;
+}
+
+p{
+  color:white;
+}
+
+.text_output, .emotion_output, .interaction_output{
+  font-style: italic;
+  color:rgb(128, 128, 128);
+  text-align: center;
+  opacity: 0;
+}
+
+
+#tapMessage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+      flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#tapMessage p{
+
+  }
+
+  #introContainer {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0;
+      padding: 0;
+      z-index: 200;
+      left: 0;
+      top: 0;
+      background-color: #303137;
+  }
+
+
+.slide{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#name{
+  z-index: 1;
+  opacity: 0;
+}
+
+#access{
+  z-index: 3;
+  opacity: 0;
+
+}
+
+#gathering{
+  z-index: 2;
+  opacity: 0;
+}
+
+#access{
+  color:rgb(209, 209, 209);
+}
+
+#access p{
+  color:rgb(209, 209, 209);
+}
+
+#accessButton{
+  background-color:rgb(108, 108, 108);
+  text-transform: none;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+#access a{
+  color:rgb(209, 209, 209, 0.45);
+}
+#accessButton:hover{
+  background-color:rgb(79, 79, 79);
+}
+#accessButton:active{
+  background-color:rgb(38, 38, 38);
+  color:rgb(195, 195, 195);
+}
+#gathering p{
+    color:rgb(209, 209, 209);
+}
+
+
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 50px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 30px;
+  width: 500px;
+}
+
+.progress-value {
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 25px;
+  background: #d2cdcd;
+  height: 20px;
+  width: 0;
+}
+
+
+#personalityScores {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+
+}
+
+.personalityResult{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+  }
+  .personalityMark {
+      font-size: 1.5rem;
+      margin: 0;
+      color:rgb(128, 128, 128);
+  }
+
+.personalityName{
+  margin:0px;
+  color:rgb(128, 128, 128);
+}
+  #controls {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: rgb(152, 152, 152);
+      position: absolute;
+      bottom: 0;
+      height: 15%;
+      margin: 0;
+    left: 0;
+  }
+
+  .controlBox{
+    margin: 10px;
+  }
+  .controlBox p{
+    text-align: center;
+  }
+
+
+  .slider {
+      height: 10px;
+      -webkit-appearance: none;
+      background: #222327;
+      outline: none;
+      border-radius: 15px;
+      overflow: hidden;
+      border: none;
+  }
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c7c5c5;
+  cursor: pointer;
+  border: none;
+  box-shadow: -407px 0 0 400px rgb(112, 112, 112);
+}
+
+
+
+#aboutButton {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+#aboutUs{
+  margin:0;
+  padding: 0;
+}
+
+
+#closeButton{
+    position: relative;
+    right: 0;
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#aboutBox {
+  height: 100%; /* 100% Full-height */
+  width: 20%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+    background-color: #585b62;
+        padding: 40px;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  transform: translateX(500px);
+}
+
+#slogan{
+
+}
+
+#explanation{
+  text-align: center;
+  margin-bottom: 10px;
+}
+#explanation2{
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

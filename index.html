@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>
+      Transire
+    </title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YEBRZ71E35"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YEBRZ71E35');
+    </script>
+
+        <script src="p5.min.js"></script>
+        <script src="p5.dom.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+
+        <script src="sketch.js"></script>
+        <script src="Light.js"></script>
+
+
+
+  </head>
+  <body>
+
+
+
+    <div id="introContainer">
+        <div id="name" class="slide">
+          <h1>Transire</h1>
+        </div>
+
+        <div id="access" class="slide">
+
+          <p id="explanation">Transire is a physical tool to ease up the grieving process <br> by using the grief therapy method - Ritual of Continuity.</p>
+          <p id="explanation2">It uses the data from the internet and social media <br> to generate a unique orb that would represent the personality of the deceased one.</p>
+          <p>In orded to continue, please give access to social media accounts</p>
+          <button id="accessButton" onclick="giveAccess()">Give access</button>
+          <a href=" " onclick="alert('It is just demonstration. We do not collect any information. The microphone is not recording or saving any information you say.')">Privacy policy</a>
+        </div>
+
+
+        <div id="gathering" class="slide">
+
+          <p id="loadingText">Searching for data from the internet and social networks...</p>
+          <div class="progress">
+            <div class="progress-value" id="progressValue"></div>
+          </div>
+        </div>
+    </div>
+
+    <h1 id="WheelName">Transire</h1>
+
+    <div id="aboutButton">
+      <p id="aboutUs" onclick="openPopUp()">About</p>
+    </div>
+
+    <div id="aboutBox">
+      <p id="closeButton" onclick="closePopUp()">Close</p>
+      <div id="aboutBoxContent">
+        <h1>About us</h1>
+        <p>This website is a digital visualization/prototype for the grieving tool - Transire.  Transire stores a digital representation of the deceased person’s personality to accompany the people who need continuity therapy or those who feel lonely during the mourning process, which aims at helping these people alleviate their sorrow.</p>
+        <p>Created by: <br>
+          Guangyu Chen <br>
+          Zhe Ding <br>
+          Milan Meij <br>
+          Tomas Gecevičius
+        </p>
+      </div>
+
+    </div>
+
+  <div id="main">
+
+    <div id="lights">
+     <div class="interaction_output unselectable">-</div>
+        <div id="Container" class="unselectable">
+
+          <div id="tapMessage">
+            <p>Tap to wake up...</p>
+           </div>
+        </div>
+
+        <div class="text_output unselectable"> Talk with the AI. <br>Tell - "I miss you" </div>
+        <div class="emotion_output unselectable"> - </div>
+
+        <div id="personalityScores">
+          <div class="personalityResult unselectable"><p class="personalityMark" id="valueOpp">63</p> <p class="personalityName unselectable">Oppeness</p>
+              <input type="range" min="1" max="100" value="50" class="slider" id="sliderOpp">
+          </div>
+          <div class="personalityResult unselectable"><p class="personalityMark" id="valueCon">74</p> <p class="personalityName unselectable">Conscientiousness</p>
+              <input type="range" min="1" max="100" value="50" class="slider" id="sliderCon">
+          </div>
+          <div class="personalityResult unselectable"><p class="personalityMark" id="valueExt">46</p> <p class="personalityName unselectable">Extraversion</p>
+              <input type="range" min="1" max="100" value="50" class="slider" id="sliderExt">
+          </div>
+          <div class="personalityResult unselectable"> <p class="personalityMark" id="valueAgr">73</p> <p class="personalityName unselectable">Agreeableness</p>
+            <input type="range" min="1" max="100" value="50" class="slider" id="sliderAgr">
+          </div>
+          <div class="personalityResult">
+             <p class="personalityMark unselectable" id="valueNeu">36</p> <p class="personalityName unselectable">Neuroticism</p>
+            <input type="range" min="1" max="100" value="50" class="slider" id="sliderNeu">
+          </div>
+        </div>
+    </div>
+
+  </div>
+
+
+
+
+<script src="anime.min.js"></script>
+    <script src="intro.js"></script>
+    <script src="Audio.js"></script>
+  </body>
+</html>
